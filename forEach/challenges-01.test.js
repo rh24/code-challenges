@@ -11,7 +11,10 @@
 
 const pushIntoSecond = (arr) => {
   const second = [];
-  // Solution code here...
+
+  arr.forEach(el => second.push(el));
+
+  return second;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -26,7 +29,13 @@ const pushIntoSecond = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const addBonusPoints = (arr) => {
-  // Solution code here...
+  const increased = [];
+  
+  for (let score of arr) {
+    increased.push(score + 5);
+  }
+
+  return increased;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -40,7 +49,14 @@ const addBonusPoints = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const addCurve = (arr) => {
-  // Solution code here...
+  const increased = [];
+
+  // use for...in when wanting to grab the index of the array
+  for (let idx in arr) {
+    increased.push(arr[idx] * 1.05);
+  }
+
+  return increased;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -53,12 +69,16 @@ const addCurve = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const greeting = (word) => {
-  // Solution code here...
+  let upperCased = '';
+
+  for (let char of word) {
+    upperCased += char.toUpperCase();
+  }
+
+  return upperCased;
 }
 
-const speaker = (message, callback) => {
-  // Solution code here...
-}
+const speaker = (message, callback) => callback(message);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
@@ -78,11 +98,18 @@ const speaker = (message, callback) => {
 // ------------------------------------------------------------------------------------------------
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  arr.push(value);
+  return arr;
 }
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  let pushed;
+
+  for (let i = 0; i < times; i++) {
+    pushed = callback(arr, num);
+  }
+
+  return pushed;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -100,11 +127,17 @@ const addNumbers = (num, arr, times, callback) => {
 // ------------------------------------------------------------------------------------------------
 
 const removeOne = (num, input) => {
-  // Solution code here...
+  if (num % 3 === 2) {
+    input.pop();
+  }
 }
 
 const removeElements = (input, callback) => {
-  // Solution code here...
+  for (let el of input) {
+    callback(el, input);
+  }
+
+  return input;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -114,7 +147,8 @@ const removeElements = (input, callback) => {
 // ------------------------------------------------------------------------------------------------
 
 const removeWithForEach = (input, callback) => {
-  // Solution code here...
+  input.forEach(num => callback(num, input));
+  return input;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -129,7 +163,13 @@ const removeWithForEach = (input, callback) => {
 // ------------------------------------------------------------------------------------------------
 
 const removeWithAnon = (input) => {
-  // Solution code here...
+  input.forEach((el, idx, input) => {
+    if (input[idx] % 3 === 2) {
+      input.pop();
+    }
+  })
+
+  return input;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -151,7 +191,15 @@ const removeWithAnon = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const createList = (availableItems) => {
-  // Solution code here...
+  const list = [];
+
+  availableItems.forEach(item => {
+    if (item.available) {
+      list.push(item.name);
+    }
+  });
+
+  return list;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -169,7 +217,21 @@ const createList = (availableItems) => {
 // ------------------------------------------------------------------------------------------------
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  const second = [];
+
+  arr.forEach(num => {
+    if (num % 15 === 0) {
+      second.push('Fizz Buzz');
+    } else if (num % 5 === 0) {
+      second.push('Buzz');
+    } else if (num % 3 === 0) {
+      second.push('Fizz');
+    } else {
+      second.push(num);
+    }
+  });
+
+  return second;
 }
 
 // ------------------------------------------------------------------------------------------------
