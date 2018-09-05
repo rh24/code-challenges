@@ -217,21 +217,21 @@ const createList = (availableItems) => {
 // ------------------------------------------------------------------------------------------------
 
 const fizzbuzz = (arr) => {
-  const second = [];
+  const answer = [];
 
   arr.forEach(num => {
     if (num % 15 === 0) {
-      second.push('Fizz Buzz');
+      answer.push('Fizz Buzz');
     } else if (num % 5 === 0) {
-      second.push('Buzz');
+      answer.push('Buzz');
     } else if (num % 3 === 0) {
-      second.push('Fizz');
+      answer.push('Fizz');
     } else {
-      second.push(num);
+      answer.push(num);
     }
   });
 
-  return second;
+  return answer;
 }
 
 // ------------------------------------------------------------------------------------------------
