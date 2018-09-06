@@ -88,7 +88,17 @@ const salesData = (data) => {
 // ------------------------------------------------------------------------------------------------
 
 const giveValentines = (list) => {
-  // Solution code here...
+  const messages = [];
+
+  list.forEach(self => {
+    const filtered = list.filter(valentine => valentine !== self);
+
+    filtered.forEach(nonSelf => {
+      messages.push(`${self} gives a Valentine to ${nonSelf}.`);
+    });
+  })
+
+  return messages;
 };
 
 // ------------------------------------------------------------------------------------------------
