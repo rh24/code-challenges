@@ -62,7 +62,17 @@ const grandTotal = (hours, stores) => {
 // ------------------------------------------------------------------------------------------------
 
 const salesData = (data) => {
-  
+  const hourlySales = grandTotal(hoursOpen, cookieStores);
+  const formattedData = [];
+
+  hourlySales.forEach((hourlyTotal, idx) => {
+    formattedData.push({
+      sales: `${hourlyTotal} cookies`,
+      time: hoursOpen[idx]
+    });
+  });
+
+  return formattedData;
 };
 
 // ------------------------------------------------------------------------------------------------
