@@ -37,6 +37,7 @@ const grandTotal = (hours, stores) => {
   for (let store of stores) {
     for (let idx in store) {
       let hourlyTotal = store[idx]
+
       if (totals[idx]) {
         totals[idx] += hourlyTotal;
       } else {
