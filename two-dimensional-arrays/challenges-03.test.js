@@ -215,7 +215,8 @@ const detectTicTacToeWin = (board) => {
   ];
   let won = false;
 
-  winCombos.forEach(combo => combo.forEach(player => { if (player === combo[0]) won = true; }));
+  // winCombos.forEach(combo => combo.forEach(player => { if (player === combo[0]) won = true; }));
+  winCombos.forEach(combo => won = combo.every(player => player === combo[0]));
 
   return won;
 };
