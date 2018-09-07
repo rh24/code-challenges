@@ -74,8 +74,17 @@ const battleship = (board, row, col) => {
 // ------------------------------------------------------------------------------------------------
 
 const calculateProduct = (numbers) => {
-  const flattened = [].concat.apply([], numbers);
-  return flattened.reduce((a, b) => a * b);
+  // const flattened = [].concat.apply([], numbers);
+  // return flattened.reduce((a, b) => a * b);
+  let product = 1;
+
+  numbers.forEach(subSet => {
+    subSet.forEach(num => {
+      product *= num;
+    });
+  });
+
+  return product;
 };
 
 // ------------------------------------------------------------------------------------------------
