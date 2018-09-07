@@ -203,7 +203,21 @@ const excel = (str) => {
 // ------------------------------------------------------------------------------------------------
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  const winCombos = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [2, 4, 6],
+    [0, 4, 8]
+  ];
+  let won = false;
+
+  winCombos.forEach(combo => combo.forEach(player => { if (player === combo[0]) won = true; }));
+
+  return won;
 };
 
 // ------------------------------------------------------------------------------------------------
