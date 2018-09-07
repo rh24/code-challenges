@@ -169,13 +169,9 @@ const excel = (str) => {
   const arr = [];
   const splitByRow = str.split('\n'); // [ '1,1,1', '4,4,4', '9,9,9' ]
 
-  splitByRow.forEach(str => {
-    arr.push(str.split(','));
-  });
+  splitByRow.forEach(str => { arr.push(str.split(',')); });
 
-  arr.forEach((subArr, idx) => {
-    subArr.forEach(numString => subArr[idx] = parseInt(numString));
-  });
+  arr.forEach((subArr, idx) => { subArr.forEach(numString => subArr[idx] = parseInt(numString)); });
 
   arr.forEach((subArr, idx) => {
     arr[idx] = subArr.reduce((a, b) => { return a + parseInt(b) }, 0);
