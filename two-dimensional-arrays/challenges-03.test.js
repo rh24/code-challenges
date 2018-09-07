@@ -213,10 +213,12 @@ const detectTicTacToeWin = (board) => {
     [2, 4, 6],
     [0, 4, 8]
   ];
+  const flattened = [].concat.apply([], board);
   let won = false;
 
-  // winCombos.forEach(combo => combo.forEach(player => { if (player === combo[0]) won = true; }));
-  winCombos.forEach(combo => won = combo.every(player => player === combo[0]));
+  winCombos.forEach(combo => {
+    won = combo.reduce((a, b) => flattened[a] === flattened[b]);
+  });
 
   return won;
 };
