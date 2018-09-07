@@ -35,7 +35,7 @@ const errands = [
 const howManyTreats = (arr) => {
   const petStore = arr.find(el => el.store === 'Pet store');
   return petStore.items.find(item => item.name === 'Treats').quantity;
-}
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
@@ -135,7 +135,7 @@ const lowestWeeklyAverage = (weather) => {
   weather.forEach(week => {
     const weeklyTotal = week.reduce((a, b) => a + b);
     averageByWeek.push(weeklyTotal / week.length);
-  })
+  });
 
   return averageByWeek.sort()[0];
 };
@@ -174,8 +174,8 @@ const excel = (str) => {
   arr.forEach((subArr, idx) => { subArr.forEach(numString => subArr[idx] = parseInt(numString)); });
 
   arr.forEach((subArr, idx) => {
-    arr[idx] = subArr.reduce((a, b) => { return a + parseInt(b) }, 0);
-  })
+    arr[idx] = subArr.reduce((a, b) => { return a + parseInt(b); }, 0);
+  });
 
   return arr;
 };
@@ -254,7 +254,7 @@ describe('Testing challenge 1', () => {
   });
   test('It should also work for other input arrays', () => {
     expect(findFourteen([[], [], [[0,1,2]]])).toStrictEqual(1);
-  })
+  });
 });
 
 describe('Testing challenge 2', () => {
@@ -263,7 +263,7 @@ describe('Testing challenge 2', () => {
   });
   test('It should also work for other arrays of objects', () => {
     expect(howManyTreats([0,0,{items: [0, {quantity: 7}]}])).toStrictEqual(7);
-  })
+  });
 });
 
 describe('Testing challenge 3', () => {
