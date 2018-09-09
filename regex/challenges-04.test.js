@@ -109,7 +109,7 @@ let hangman = (str) => {
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
 const findShells = (phrase) => {
-  // Solution code here...
+  return phrase.match(/[\w]+/g).filter(word => /(ells)/.test(word));
 };
 
 // ------------------------------------------------------------------------------------------------
