@@ -40,9 +40,10 @@ const isCapitalized = (string) => {
 // ------------------------------------------------------------------------------------------------
 
 const citiesAtoJ = (cities) => {
-  let selectedCities = cities.map(city => city.match(/^[A-J][a-z]+/));
-  selectedCities = selectedCities.filter(Boolean);
-  return [].concat.apply([], selectedCities);
+  // let selectedCities = cities.map(city => city.match(/^[A-J][a-z]+/));
+  // selectedCities = selectedCities.filter(Boolean);
+  // return [].concat.apply([], selectedCities);
+  return cities.filter(city => /^[A-J][a-z]+/.test(city));
 };
 
 // ------------------------------------------------------------------------------------------------
