@@ -46,7 +46,9 @@ const wordsToCharList = (input) => {
 
 const totalSumCSV = (input) => {
   let total = 0;
-  // Solution code here...
+
+  input.split(',').forEach(num => total += Number(num));
+
   return total;
 };
 
