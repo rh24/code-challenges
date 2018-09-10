@@ -122,9 +122,8 @@ const stepActions = (recipe) => {
 // ------------------------------------------------------------------------------------------------
 
 const splitFoods = (recipe) => {
-  let result = [];
-  // Solution code here...
-  return result;
+  // this is the same as my solution 4
+  return recipe.ingredients.map(ingredient => ingredient.split(' ').slice(2).join(' '));
 }
 
 // ------------------------------------------------------------------------------------------------
