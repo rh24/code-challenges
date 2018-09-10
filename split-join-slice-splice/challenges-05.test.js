@@ -192,7 +192,10 @@ const removeVowels = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const extractVowels = (input) => {
-  // Solution code here...
+  const removed = input.match(/[aeiou]/gi).sort().join('');
+  const leftover = input.match(/[^aeiou]/gi).join('');
+
+  return [leftover, removed];
 };
 
 // ------------------------------------------------------------------------------------------------
