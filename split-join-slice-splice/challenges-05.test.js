@@ -16,7 +16,11 @@
 
 const howMuchPencil = (name) => {
   let result = [];
-  // Solution code here...
+
+  for (let i = 0; i <= name.length; i++) {
+    i === name.length ? result.push('') : result.push(name.slice(i));
+  }
+  
   return result;
 };
 
