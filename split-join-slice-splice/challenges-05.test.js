@@ -20,7 +20,7 @@ const howMuchPencil = (name) => {
   for (let i = 0; i <= name.length; i++) {
     i === name.length ? result.push('') : result.push(name.slice(i));
   }
-  
+
   return result;
 };
 
@@ -34,7 +34,7 @@ const howMuchPencil = (name) => {
 // ------------------------------------------------------------------------------------------------
 
 const wordsToCharList = (input) => {
-  // Solution code here...
+  return input.split('');
 };
 
 // ------------------------------------------------------------------------------------------------
