@@ -207,7 +207,20 @@ const houseSize = (arr) => {
 const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
 
 const houseSurvivors = (arr) => {
-  // Solution code here...
+
+  const countMembers = (member) => {
+    let count = 1; // includes character's self
+
+    if (!deceasedSpouses.includes(member.spouse) && member.spouse) { count++ }
+    count += member.children.length;
+
+    return count;
+  }
+
+  return arr.map(obj => ({
+    house: obj.house,
+    members: countMembers(obj)
+  }))
 }
 
 // ------------------------------------------------------------------------------------------------
