@@ -141,7 +141,8 @@ const getHouses = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  // can't use getFrom because I haven't been able to update node. Object.values() and Object.entries is not working
+  return arr.find(char => char.name === character).children.length;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -153,7 +154,7 @@ const hasChildrenValues = (arr, character) => {
 // ------------------------------------------------------------------------------------------------
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+
 }
 
 // ------------------------------------------------------------------------------------------------
