@@ -154,7 +154,17 @@ const hasChildrenValues = (arr, character) => {
 // ------------------------------------------------------------------------------------------------
 
 const hasChildrenEntries = (arr, character) => {
+  let hasChildren;
+  let foundCharacter;
 
+  arr.forEach(charObj => {
+    if (charObj.name === character) {
+      foundCharacter = Object.entries(charObj)
+    }
+  });
+
+  hasChildren = foundCharacter.find(arr => arr[0] === 'children');
+  return !!hasChildren[1].length;
 }
 
 // ------------------------------------------------------------------------------------------------
