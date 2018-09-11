@@ -8,7 +8,7 @@
 // ------------------------------------------------------------------------------------------------
 
 const getKeys = (obj) => {
-  // Solution code here...
+  return Object.keys(obj);
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ const getKeys = (obj) => {
 // ------------------------------------------------------------------------------------------------
 
 const getValues = (obj) => {
-  // Solution code here...
+  return Object.values(obj);
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -30,7 +30,7 @@ const getValues = (obj) => {
 // ------------------------------------------------------------------------------------------------
 
 const getEntries = (obj) => {
-  // Solution code here...
+  return Object.entries(obj);
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -48,7 +48,16 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
   finalExam: true };
 
 const getFrom = (obj, property) => {
-  // Solution code here...
+  switch (property) {
+  case 'keys':
+    return Object.keys(obj);
+  case 'values':
+    return Object.values(obj);
+  case 'entries':
+    return Object.entries(obj);
+  default:
+    return;
+  }
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -106,7 +115,7 @@ let characters = [
 ]
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  return arr.map(character => character.name).length;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -117,7 +126,11 @@ const totalCharacters = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const getHouses = (arr) => {
-  // Solution code here...
+  // below returns unique values
+  // return arr.map(character => character.house).filter((val, idx, self) => self.indexOf(val) === idx);
+
+  // below returns all values
+  return arr.map(character => character.house);
 }
 
 // ------------------------------------------------------------------------------------------------
