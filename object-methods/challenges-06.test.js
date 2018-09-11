@@ -176,7 +176,20 @@ const hasChildrenEntries = (arr, character) => {
 // ------------------------------------------------------------------------------------------------
 
 const houseSize = (arr) => {
-  // Solution code here...
+
+  const countMembers = (member) => {
+    let count = 1; // includes character's self
+
+    if (member.spouse) { count++ }
+    count += member.children.length;
+
+    return count;
+  }
+
+  return arr.map(obj => ({
+    house: obj.house,
+    members: countMembers(obj)
+  }))
 }
 
 // ------------------------------------------------------------------------------------------------
