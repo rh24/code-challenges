@@ -48,16 +48,18 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
   finalExam: true };
 
 const getFrom = (obj, property) => {
-  switch (property) {
-  case 'keys':
-    return Object.keys(obj);
-  case 'values':
-    return Object.values(obj);
-  case 'entries':
-    return Object.entries(obj);
-  default:
-    return;
-  }
+  // switch (property) {
+  // case 'keys':
+  //   return Object.keys(obj);
+  // case 'values':
+  //   return Object.values(obj);
+  // case 'entries':
+  //   return Object.entries(obj);
+  // default:
+  //   return;
+  // }
+
+  return Object[property](obj);
 }
 
 // ------------------------------------------------------------------------------------------------
