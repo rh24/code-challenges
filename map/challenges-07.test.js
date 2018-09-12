@@ -18,7 +18,7 @@ const myMap = (arr, cb) => {
   const newArr = [];
 
   for (let i = 0; i < arr.length; i++) {
-    newArr.push(cb(arr[i]));
+    newArr.push(cb(arr[i], i));
   }
 
   return newArr;
@@ -39,6 +39,7 @@ const forLoopTwoToThe = (input) => {
 
   return result;
 };
+
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
