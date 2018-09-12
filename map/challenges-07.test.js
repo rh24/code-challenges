@@ -173,7 +173,7 @@ const snorlaxStats = {
 };
 
 const extractStats = (stats) => {
-  // Solution code here...
+  return stats.map(stat => ({ name: stat.stat.name, total: (stat.effort + stat.baseStat) }));
 };
 
 // ------------------------------------------------------------------------------------------------
