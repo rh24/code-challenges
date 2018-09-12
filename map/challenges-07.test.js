@@ -76,7 +76,13 @@ const charCode = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const evenOdd = (input) => {
-  // Solution code here...
+  return input.map(n => {
+    let mapped;
+    n % 2 === 0 ? mapped = 'even' : mapped ='odd';
+    if (!Number(n)) { mapped = 'N/A' }
+
+    return mapped;
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
