@@ -181,7 +181,7 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (input) => {
-  // Solution code here...
+  return input.filter(char => !char.children);
 };
 
 // ------------------------------------------------------------------------------------------------
