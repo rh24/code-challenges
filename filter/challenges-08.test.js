@@ -127,7 +127,7 @@ const getBaseStatGreaterThan = (input, minBaseStat) => {
 // ------------------------------------------------------------------------------------------------
 
 const getStatName = (input, minBaseStat) => {
-  // Solution code here...
+  return getBaseStatGreaterThan(input, minBaseStat).map(obj => obj.stat.name);
 };
 
 // ------------------------------------------------------------------------------------------------
