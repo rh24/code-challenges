@@ -17,7 +17,7 @@ const isEven = (n) => {
   if (n % 2 === 0) { return n; }
 }
 
-console.log(myFilter([2, 3, 4, 5, 6, 7, 8, 9, 10], isEven));
+// console.log(myFilter([2, 3, 4, 5, 6, 7, 8, 9, 10], isEven));
 
 'use strict';
 
@@ -31,7 +31,7 @@ console.log(myFilter([2, 3, 4, 5, 6, 7, 8, 9, 10], isEven));
 // ------------------------------------------------------------------------------------------------
 
 const oddValues = (input) => {
-  // Solution code here...
+  return input.filter(n => n % 2 !== 0);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -47,7 +47,13 @@ const oddValues = (input) => {
 
 
 const filterStringsWithVowels = (input) => {
-  // Solution code here...
+  // return input.filter(str => {
+  //   if (/aeiou/.test(str)) { return str; }
+  // });
+
+  console.log(input);
+
+  return input.filter(str => /aeiou/.test(str));
 };
 
 
@@ -61,7 +67,7 @@ const filterStringsWithVowels = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const notInFirstArray = (forbiddenValues, input) => {
-  // Solution code here...
+  return input.filter(val => { if (!forbiddenValues.includes(val)) return val });
 };
 
 // ------------------------------------------------------------------------------------------------
