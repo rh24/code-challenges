@@ -195,7 +195,7 @@ const getCharactersWithoutChildren = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const evenOddNumericValues = (input) => {
-  // Solution code here...
+  return input.filter(n => typeof n === 'number').map(n => n % 2 === 0 ? 'even' : 'odd');
 };
 
 // ------------------------------------------------------------------------------------------------
