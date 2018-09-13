@@ -4,7 +4,7 @@ const myFilter = (arr, cb) => {
   const newArr = [];
 
   for (let i = 0; i < arr.length; i++) {
-    const currentVal = cb(arr[i]);
+    const currentVal = cb(arr[i], i);
     if (currentVal) {
       newArr.push(currentVal);
     }
