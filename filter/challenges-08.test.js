@@ -47,13 +47,7 @@ const oddValues = (input) => {
 
 
 const filterStringsWithVowels = (input) => {
-  // return input.filter(str => {
-  //   if (/aeiou/.test(str)) { return str; }
-  // });
-
-  console.log(input);
-
-  return input.filter(str => /aeiou/.test(str));
+  return input.filter(str => /[aeiou]/gi.test(str));
 };
 
 
