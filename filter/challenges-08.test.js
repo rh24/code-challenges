@@ -30,9 +30,7 @@ const isEven = (n) => {
 // For example, oddValues([1,2,3]) returns [1,3].
 // ------------------------------------------------------------------------------------------------
 
-const oddValues = (input) => {
-  return input.filter(n => n % 2 !== 0);
-};
+const oddValues = (input) => input.filter(n => n % 2);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
@@ -46,9 +44,7 @@ const oddValues = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 
-const filterStringsWithVowels = (input) => {
-  return input.filter(str => /[aeiou]/gi.test(str));
-};
+const filterStringsWithVowels = (input) => input.filter(str => /[aeiou]/gi.test(str));
 
 
 // ------------------------------------------------------------------------------------------------
@@ -60,9 +56,7 @@ const filterStringsWithVowels = (input) => {
 // For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 // ------------------------------------------------------------------------------------------------
 
-const notInFirstArray = (forbiddenValues, input) => {
-  return input.filter(val => { if (!forbiddenValues.includes(val)) return val });
-};
+const notInFirstArray = (forbiddenValues, input) => input.filter(val => !forbiddenValues.includes(val));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
@@ -106,9 +100,7 @@ const snorlaxData = {
   weight: 4600,
 };
 
-const getBaseStatGreaterThan = (input, minBaseStat) => {
-  return input.filter(stat => stat.baseStat > minBaseStat);
-};
+const getBaseStatGreaterThan = (input, minBaseStat) => input.filter(stat => stat.baseStat > minBaseStat);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
@@ -120,9 +112,7 @@ const getBaseStatGreaterThan = (input, minBaseStat) => {
 // For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 'special-attack'].
 // ------------------------------------------------------------------------------------------------
 
-const getStatName = (input, minBaseStat) => {
-  return getBaseStatGreaterThan(input, minBaseStat).map(obj => obj.stat.name);
-};
+const getStatName = (input, minBaseStat) => getBaseStatGreaterThan(input, minBaseStat).map(obj => obj.stat.name);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 6
@@ -174,9 +164,7 @@ const characters = [
   },
 ];
 
-const getCharactersWithoutChildren = (input) => {
-  return input.filter(char => !char.children);
-};
+const getCharactersWithoutChildren = (input) => input.filter(char => !char.children);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7
@@ -188,9 +176,7 @@ const getCharactersWithoutChildren = (input) => {
 // For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 'odd'].
 // ------------------------------------------------------------------------------------------------
 
-const evenOddNumericValues = (input) => {
-  return input.filter(n => typeof n === 'number').map(n => n % 2 === 0 ? 'even' : 'odd');
-};
+const evenOddNumericValues = (input) => input.filter(n => typeof n === 'number').map(n => n % 2 === 0 ? 'even' : 'odd');
 
 // ------------------------------------------------------------------------------------------------
 // TESTS
