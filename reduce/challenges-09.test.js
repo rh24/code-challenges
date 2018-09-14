@@ -123,9 +123,7 @@ const extractStat = (statName, input) => input.reduce((acc, curr) => { if (acc.s
 // calculate the array's average value.
 // ------------------------------------------------------------------------------------------------
 
-const calculateAverage = (input) => {
-  // Solution code here...
-};
+const calculateAverage = (input) => (input.reduce((acc, curr) => acc + curr) / input.length);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
