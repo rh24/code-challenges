@@ -114,14 +114,12 @@ const snorlaxData = {
   weight: 4600,
 };
 
-const extractStat = (statName, input) => {
-  // Solution code here...
-};
+const extractStat = (statName, input) => input.reduce((acc, curr) => { if (acc.stat.name === statName) return acc; });
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
 //
-// Write a function that, given an array of numbers as input, uses ONE call to filter to
+// Write a function that, given an array of numbers as input, uses ONE call to reduce to
 // calculate the array's average value.
 // ------------------------------------------------------------------------------------------------
 
