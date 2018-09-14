@@ -135,12 +135,11 @@ const calculateAverage = (input) => (input.reduce((acc, curr) => acc + curr) / i
 //
 // ------------------------------------------------------------------------------------------------
 
-const extractChildren = input => {
-  return input.filter(parent => parent.name.includes('a')).reduce((acc, curr) => {
+const extractChildren = input => input.filter(parent => parent.name.includes('a'))
+  .reduce((acc, curr) => {
     if (curr.children) acc.push(curr.children);
     return [].concat.apply([], acc);
   }, []);
-};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 6
@@ -151,12 +150,10 @@ const extractChildren = input => {
 // Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 // ------------------------------------------------------------------------------------------------
 
-const reversedString = (input) => {
-  return input.split('').reduceRight((acc, curr) => {
-    acc += curr
-    return acc;
-  }, '');
-};
+const reversedString = (input) => input.split('').reduceRight((acc, curr) => {
+  acc += curr
+  return acc;
+}, '');
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7
@@ -176,9 +173,7 @@ const isPrime = (value) => {
   return value > 1;
 };
 
-const countPrimeNumbers = (input) => {
-  // Solution code here...
-}
+const countPrimeNumbers = (input) => input.reduce((acc, curr) => isPrime(curr) ? acc += 1 : acc, 0);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 8
