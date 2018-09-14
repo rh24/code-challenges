@@ -152,7 +152,10 @@ const extractChildren = input => {
 // ------------------------------------------------------------------------------------------------
 
 const reversedString = (input) => {
-  // Solution code here...
+  return input.split('').reduceRight((acc, curr) => {
+    acc += curr
+    return acc;
+  }, '');
 };
 
 // ------------------------------------------------------------------------------------------------
