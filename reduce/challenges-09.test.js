@@ -65,14 +65,12 @@ const characters = [
   },
 ];
 
-const countNumberOfChildren = (input) => {
-  return input.reduce((acc, curr) => {
-    if (curr.children) {
-      acc += curr.children.length;
-    }
-    return acc;
-  }, 0);
-};
+const countNumberOfChildren = (input) => input.reduce((acc, curr) => {
+  if (curr.children) {
+    acc += curr.children.length;
+  }
+  return acc;
+}, 0);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
