@@ -136,7 +136,10 @@ const calculateAverage = (input) => (input.reduce((acc, curr) => acc + curr) / i
 // ------------------------------------------------------------------------------------------------
 
 const extractChildren = input => {
-  // Solution code here...
+  return input.filter(parent => parent.name.includes('a')).reduce((acc, curr) => {
+    if (curr.children) acc.push(curr.children);
+    return [].concat.apply([], acc);
+  }, []);
 };
 
 // ------------------------------------------------------------------------------------------------
