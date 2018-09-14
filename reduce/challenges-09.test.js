@@ -230,9 +230,10 @@ let starWarsData = [{
   gender: 'female'
 }]
 
-const returnNames = (data) => {
-  // Solution code here...
-};
+const returnNames = (data) => data.reduce((acc, curr) => {
+  acc.push(curr.name)
+  return acc;
+}, []);
 
 // ------------------------------------------------------------------------------------------------
 // TESTS
