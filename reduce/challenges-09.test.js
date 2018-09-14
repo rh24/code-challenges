@@ -9,9 +9,10 @@
 // Note: You may not use the array's built-in length property.
 // ------------------------------------------------------------------------------------------------
 
-const countNumberOfElements = (input) => {
-  // Solution code here...
-};
+const countNumberOfElements = (input) => input.reduce((acc, curr) => {
+  acc++
+  return acc;
+}, 0);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
@@ -65,7 +66,12 @@ const characters = [
 ];
 
 const countNumberOfChildren = (input) => {
-  // Solution code here...
+  return input.reduce((acc, curr) => {
+    if (curr.children) {
+      acc += curr.children.length;
+    }
+    return acc;
+  }, 0);
 };
 
 // ------------------------------------------------------------------------------------------------
