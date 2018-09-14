@@ -150,10 +150,7 @@ const extractChildren = input => input.filter(parent => parent.name.includes('a'
 // Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 // ------------------------------------------------------------------------------------------------
 
-const reversedString = (input) => input.split('').reduceRight((acc, curr) => {
-  acc += curr
-  return acc;
-}, '');
+const reversedString = (input) => input.split('').reduceRight((acc, curr) => acc += curr, '');
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7
