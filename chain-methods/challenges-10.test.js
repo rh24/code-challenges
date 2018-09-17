@@ -12,9 +12,7 @@
 // For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 // ------------------------------------------------------------------------------------------------
 
-const count = (target, input) => {
-  // Solution code here...
-};
+const count = (target, input) => input.reduce((acc, curr) => acc + curr.filter(n => n === target).length, 0);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
