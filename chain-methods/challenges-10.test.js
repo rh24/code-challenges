@@ -38,7 +38,7 @@ const totalSum = (input) => input.reduce((acc, curr) => acc + curr.reduce((a, b)
 // ------------------------------------------------------------------------------------------------
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+  return input.map(n => n.filter(n => n % 5 === 0).map(n => 2 ** n));
 };
 
 // ------------------------------------------------------------------------------------------------
