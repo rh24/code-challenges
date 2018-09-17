@@ -23,9 +23,7 @@ const count = (target, input) => input.reduce((acc, curr) => acc + curr.filter(n
 // Note: You might need to use the same method more than once.
 // ------------------------------------------------------------------------------------------------
 
-const totalSum = (input) => {
-  // Solution code here...
-};
+const totalSum = (input) => input.reduce((acc, curr) => acc + curr.reduce((a, b) => a + b), 0);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
