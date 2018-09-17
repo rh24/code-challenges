@@ -37,7 +37,9 @@ const totalSum = (input) => input.reduce((acc, curr) => acc + curr.reduce((a, b)
 // For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 // ------------------------------------------------------------------------------------------------
 
-const divisibleByFiveTwoToThePower = (input) => input.map(n => n.filter(n => n % 5 === 0 || typeof n !== 'number').map(n => typeof n === 'number' ? 2 ** n : 0)).map(n => n.filter(n => n));
+// const divisibleByFiveTwoToThePower = (input) => input.map(n => n.filter(n => n % 5 === 0 || typeof n !== 'number').map(n => typeof n === 'number' ? 2 ** n : 0)).map(n => n.filter(n => n));
+
+const divisibleByFiveTwoToThePower = (input) => input.map(n => n.filter(n => n % 5 === 0 && typeof n === 'number').map(n => 2 ** n));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
