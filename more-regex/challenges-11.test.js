@@ -40,7 +40,7 @@ const findTagNames = elements => [].concat.apply([], elements.map(tag => tag.mat
 // regex you should use. It's many many lines long.
 // ------------------------------------------------------------------------------------------------
 
-const validateEmail = (email) => /^\w+\.?\w+\@\w+\.(com|net|org)$/.test(email);
+const validateEmail = (email) => /^\w+\.?\w+@\w+\.(com|net|org)$/.test(email);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
