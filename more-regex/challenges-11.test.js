@@ -21,7 +21,7 @@ const validatePin = (pin) => /^\d{4}$/.test(pin);
 // returns ['/h1', '/div', '/p'].
 // ------------------------------------------------------------------------------------------------
 
-const findTagNames = elements => [].concat.apply([], elements.map(tag => tag.match(/\<\/\w+\>/gi).map(el => el.replace(/[\<\>]/g, ''))));
+const findTagNames = elements => [].concat.apply([], elements.map(tag => tag.match(/<\/\w+>/gi).map(el => el.replace(/[<>]/g, ''))));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
