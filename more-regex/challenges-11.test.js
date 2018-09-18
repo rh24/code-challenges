@@ -63,7 +63,7 @@ const validateEmail = (email) => /^\w+\.?\w+@\w+\.(com|net|org)$/.test(email);
 // Return either true or false.
 // ------------------------------------------------------------------------------------------------
 
-const validatePhoneNumber = (phoneNumber) => /^((\(\d{3}\)\s?)|(\d{3})(\-?|\s?))(((\d{3}))(\-(\d{4}))|\s?(\d{3})\s?(\d{4}))$/.test(phoneNumber);
+const validatePhoneNumber = (phoneNumber) => /^((\(\d{3}\)\s?)|(\d{3})(-?|\s?))(((\d{3}))(-(\d{4}))|\s?(\d{3})\s?(\d{4}))$/.test(phoneNumber);
 
 
 // ------------------------------------------------------------------------------------------------
