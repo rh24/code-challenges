@@ -55,9 +55,7 @@ const alphabetizeBetter = (strs) => strs.sort((a, b) => a.localeCompare(b));
 // ];
 // ------------------------------------------------------------------------------------------------
 
-const sortByPrice = (objs) => {
-  // Solution code here...
-};
+const sortByPrice = (objs) => objs.sort((a, b) => a.price - b.price);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 6
