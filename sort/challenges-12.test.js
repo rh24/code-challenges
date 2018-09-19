@@ -39,9 +39,7 @@ const sortByLength = (strings) => strings.sort((a, b) => a.length - b.length);
 // and so is ['alphabet', 'Alphabet', 'carrot', 'Zebra'].
 // ------------------------------------------------------------------------------------------------
 
-const alphabetizeBetter = (strs) => {
-  // Solution code here...
-};
+const alphabetizeBetter = (strs) => strs.sort((a, b) => a.localeCompare(b));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
