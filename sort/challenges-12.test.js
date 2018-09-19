@@ -128,9 +128,17 @@ const meetings = [
   new Meeting('Friday', '1200', '1345'),
 ];
 
-const sortMeetingsByDay = (meetings) => {
-  // Solution code here...
-};
+const sortMeetingsByDay = (meetings) => meetings.sort((a, b) => {
+  const orderDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+
+  if (orderDays.indexOf(a.dayOfWeek) > orderDays.indexOf(b.dayOfWeek)) {
+    return 1;
+  } else if (orderDays.indexOf(b.dayOfWeek) > orderDays.indexOf(a.dayOfWeek)) {
+    return -1;
+  } else {
+    return 0;
+  }
+});
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 10
