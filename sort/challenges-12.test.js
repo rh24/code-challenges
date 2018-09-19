@@ -149,9 +149,7 @@ const sortMeetingsByDay = (meetings) => meetings.sort((a, b) => {
 // on the same day, the shorter meeting should come first.
 // ------------------------------------------------------------------------------------------------
 
-const sortSchedule = (meetings) => {
-  // Solution code here...
-};
+const sortSchedule = (meetings) => sortMeetingsByDay(meetings).sort((a, b) => a.dayOfWeek === b.dayOfWeek && a.start !== b.start ? a.start.localeCompare(b.start) : (a.dayOfWeek === b.dayOfWeek && a.start === b.start ? a.end.localeCompare(b.end) : 0));
 
 // ------------------------------------------------------------------------------------------------
 // TESTS
