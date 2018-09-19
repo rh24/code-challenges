@@ -88,9 +88,7 @@ const people = [
   new Person('Stan', 'Seattle', 67),
 ];
 
-const sortPeople = (people) => {
-  // Solution code here...
-};
+const sortPeople = (people) => people.sort((a, b) => a.lastName > b.lastName ? 1 : (b.lastName > a.lastName ? -1 : 0));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 8
