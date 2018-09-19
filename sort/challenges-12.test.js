@@ -7,9 +7,7 @@
 // with the numbers sorted, highest to smallest.
 // ------------------------------------------------------------------------------------------------
 
-const sortBackwards = (nums) => {
-  // Solution code here...
-};
+const sortBackwards = (nums) => nums.sort((a, b) => b - a);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
