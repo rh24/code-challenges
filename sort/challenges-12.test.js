@@ -28,9 +28,7 @@ const alphabetize = (strings) => strings.sort((a, b) => a > b ? 1 : (a < b ? -1 
 // with the strings sorted by their length, lowest to highest.
 // ------------------------------------------------------------------------------------------------
 
-const sortByLength = (strings) => {
-
-};
+const sortByLength = (strings) => strings.sort((a, b) => a.length - b.length);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
