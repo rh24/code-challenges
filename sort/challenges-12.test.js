@@ -19,7 +19,7 @@ const sortBackwards = (nums) => nums.sort((a, b) => b - a);
 // For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 // ------------------------------------------------------------------------------------------------
 
-const alphabetize = (strings) => strings.sort((a, b) => a > b ? 1 : (a < b ? -1 : 0));
+const alphabetize = (strings) => strings.sort();
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
