@@ -101,9 +101,7 @@ const sortPeople = (people) => people.sort((a, b) => a.lastName > b.lastName ? 1
 // (Do not worry about capitalization.)
 // ------------------------------------------------------------------------------------------------
 
-const sortPeopleBetter = (people) => {
-  // Solution code here...
-};
+const sortPeopleBetter = (people) => people.sort((a, b) => a.lastName > b.lastName ? 1 : (b.lastName > a.lastName ? -1 : (b.firstName > a.firstName ? -1 : (a.firstName > b.firstName ? 1 : (b.age > a.age ? -1 : (a.age > b.age ? 1 : 0))))));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 9
