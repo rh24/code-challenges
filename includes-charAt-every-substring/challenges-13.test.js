@@ -29,9 +29,7 @@ const findHappiness = (strs) => strs.filter(str => str.includes(':'));
 // (XXX) XXX-XXXX format, and returns an array with the phone number strings in XXXXXXXXXX format.
 // ------------------------------------------------------------------------------------------------
 
-const standardizePhoneNumbers = (phoneNumbers) => {
-  // Solution code here...
-};
+const standardizePhoneNumbers = (phoneNumbers) => phoneNumbers.map(num => num.replace(/[()-\s]/g, ''));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
