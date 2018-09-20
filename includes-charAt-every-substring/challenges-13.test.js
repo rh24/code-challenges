@@ -56,9 +56,7 @@ const allHappy = (strs) => strs.every(str => str.includes(':'));
 // Return an array containing only those strings from the original array that contain the target string.
 // ------------------------------------------------------------------------------------------------
 
-const findAnything = (strs, target) => {
-  // Solution code here...
-};
+const findAnything = (strs, target) => strs.filter(str => str.includes(target));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7
