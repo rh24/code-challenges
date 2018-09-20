@@ -20,9 +20,7 @@ const firstLetters = (strs) => strs.map(word => word.charAt(0));
 // e.g. ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] => ['this is great :)', ':)))))']
 // ------------------------------------------------------------------------------------------------
 
-const findHappiness = (strs) => {
-  // Solution code here...
-};
+const findHappiness = (strs) => strs.filter(str => str.includes(':'));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
