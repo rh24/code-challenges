@@ -65,9 +65,7 @@ const findAnything = (strs, target) => strs.filter(str => str.includes(target));
 // Return a boolean based on whether or not every string in the array contains the target string.
 // ------------------------------------------------------------------------------------------------
 
-const allAnything = (strs, target) => {
-  // Solution code here...
-};
+const allAnything = (strs, target) => strs.every(str => str.includes(target));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 8
