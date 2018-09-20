@@ -79,9 +79,7 @@ const allAnything = (strs, target) => strs.every(str => str.includes(target));
 // is removed from every course.
 // ------------------------------------------------------------------------------------------------
 
-const unenrollBrook = (roster) => {
-  // Solution code here...
-};
+const unenrollBrook = (roster) => roster.map(course => course.filter(name => !name.includes('Brook')));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 9
@@ -98,9 +96,7 @@ const unenrollBrook = (roster) => {
 
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-const sortByDay = (eventStrings) => {
-  // Solution code here...
-};
+const sortByDay = (eventStrings) => daysOfWeek.map(day => eventStrings.filter(str => str.includes(day)));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 10
