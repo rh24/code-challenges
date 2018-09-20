@@ -38,9 +38,7 @@ const standardizePhoneNumbers = (phoneNumbers) => phoneNumbers.map(num => num.re
 // characters from that string.
 // ------------------------------------------------------------------------------------------------
 
-const onlyOddChars = (str) => {
-  // Solution code here...
-};
+const onlyOddChars = (str) => str.split('').reduce((acc, curr, idx) => idx % 2 ? acc += curr : acc, '');
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
