@@ -47,9 +47,7 @@ const onlyOddChars = (str) => str.split('').reduce((acc, curr, idx) => idx % 2 ?
 // whether all those strings contain ":)".
 // ------------------------------------------------------------------------------------------------
 
-const allHappy = (strs) => {
-  // Solution code here...
-};
+const allHappy = (strs) => strs.every(str => str.includes(':'));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 6
