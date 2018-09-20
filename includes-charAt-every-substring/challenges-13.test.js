@@ -105,9 +105,7 @@ const sortByDay = (eventStrings) => daysOfWeek.map(day => eventStrings.filter(st
 // the first character of the first string, the second character of the second string, etc.
 // ------------------------------------------------------------------------------------------------
 
-const characterByIndex = (strs) => {
-  // Solution code here...
-};
+const characterByIndex = (strs) => strs.map((str, idx) => str.charAt(idx));
 
 // ------------------------------------------------------------------------------------------------
 // TESTS
